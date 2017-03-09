@@ -85,17 +85,13 @@ app.on('ready', () => {
     mainWindow.openDevTools();
   }
 
-  const ignoreOpenInNewWindow = [
-    'teams.microsoft',
-    'login.microsoftonline',
-    'sts.sportradar',
-  ];
+  const ignoreOpenInNewWindow = ['teams.microsoft', 'microsoftonline'];
 
   const handleRedirect = (e, url) => {
     let ignoreOpen = false;
 
     ignoreOpenInNewWindow.forEach(ignoreUrl => {
-      if (url.indexOf(ignoreUrl) > -1) {
+      if (url.toLowerCase().indexOf(ignoreUrl) > -1) {
         ignoreOpen = true;
       }
     });
