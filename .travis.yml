@@ -15,4 +15,4 @@ deploy:
   file_glob: true
   file: dist/*
   on:
-    repo: sportradar/ms-teams-linux
+    tags: true
