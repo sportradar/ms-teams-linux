@@ -4,6 +4,7 @@ import DevelopmentMenuTemplateMenu from './menu/DevelopmentMenuTemplateMenu';
 import FileMenu from './menu/FileMenu';
 import HelpMenu from './menu/HelpMenu';
 import TrayMenu from './menu/TrayMenu';
+import HandleRightClick from './menu/RightClick';
 import createWindow from './helpers/window';
 
 // Special module holding environment variables which you declared
@@ -108,6 +109,8 @@ app.on('ready', () => {
 
   mainWindow.webContents.on('will-navigate', handleRedirect);
   mainWindow.webContents.on('new-window', handleRedirect);
+  mainWindow.webContents.on('context-menu', (event, props) =>
+    HandleRightClick(event, props, mainWindow));
 });
 
 app.on('window-all-closed', () => {
