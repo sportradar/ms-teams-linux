@@ -2,6 +2,9 @@
 
 [![Build Status](https://travis-ci.org/sportradar/ms-teams-linux.svg?branch=master)](https://travis-ci.org/sportradar/ms-teams-linux)
 
+## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `Important information` 
+App is not maintained anymore since our team moved to another tool. Feel free to fork.
+
 ## Description
 Microsoft Teams Capsule is unofficial Microsoft Teams application for Linux, which uses [electron framework](http://electron.atom.io/) to wrap web version of [Microsoft Teams](https://teams.microsoft.com/).
 
